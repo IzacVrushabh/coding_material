@@ -13,6 +13,10 @@ public://variables
    
    }
    //functions
+   void insert();
+   void display();
+   void search();
+   void delete();
 
 
 
