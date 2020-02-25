@@ -1,5 +1,9 @@
 #include <iostream>
+#include <string.h>
+#include <iomanip.h>
+#include <math.h>
 using namespace std;
+
 
 class class_name{
 
