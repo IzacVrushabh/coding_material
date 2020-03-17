@@ -4,6 +4,7 @@ using namespace std;
 #define ll long long int
 #define INF 1000000007
 #define PI 3.1415926535897932384626
+#define endl "\n"
 typedef pair<int, int>  pii;
 typedef pair<ll, ll>    pl;
 typedef vector<int>	    vi;
@@ -12,6 +13,75 @@ typedef vector<pii>		vpii;
 typedef vector<pl>		vpl;
 typedef vector<vi>		vvi;
 typedef vector<vl>		vvl;
+
+ll parity(ll x) {
+  //1 if odd
+  ll y;
+  y = x ^ (x >> 1);
+  y = y ^ (y >> 2);
+  y = y ^ (y >> 4);
+  y = y ^ (y >> 8);
+  y = y ^ (y >>16);
+  return y & 1;
+}
+
+ll gcd(ll a,ll b){ 
+    if (b == 0) 
+        return a; 
+    return gcd(b, a % b);  
+      
+} 
+
+
+ll fac(ll n) { 
+   if ((n==0)||(n==1))
+      return 1; 
+   else
+      return n*fac(n-1);
+}
+
+
+ll combination(ll n,ll k){
+    ll res = 1;
+    if(k>n-k)
+        k=n-k;
+    for(int i=0;i<k;++i)
+    {
+        res=((res*(n-i))/(i+1));
+        
+        
+    }
+    return res;
+}
+
+
+ll power(ll a, ll b, ll mod){
+	ll x = 1, y = a;
+	while (b > 0){
+		if (b%2){
+			x = (x*y)%mod;
+		}
+		y = (y*y)%mod;
+		b /= 2;
+	}
+	return x%mod;
+}	
+
+
+ll modInverse(ll n, ll mod){
+	return power(n, mod-2, mod);
+}
+
+
+ll combination(ll n, ll r, ll p){ 
+      if (r==0) 
+      return 1; 
+    ll fac[n+1]; 
+    fac[0] = 1; 
+    for (ll i=1 ; i<=n; i++) 
+        fac[i] = fac[i-1]*i%p; 
+    return (fac[n]*modInverse(fac[r],p)%p*modInverse(fac[n-r],p)%p)%p; 
+}
 
 int main() {
     ios_base::sync_with_stdio(false);
