@@ -5,6 +5,7 @@ using namespace std;
 #define INF 1000000007
 #define PI 3.1415926535897932384626
 #define endl "\n"
+
 typedef pair<int, int>  pii;
 typedef pair<ll, ll>    pl;
 typedef vector<int>	    vi;
@@ -13,6 +14,8 @@ typedef vector<pii>		vpii;
 typedef vector<pl>		vpl;
 typedef vector<vi>		vvi;
 typedef vector<vl>		vvl;
+
+const int MOD = 1e9 + 7
 
 ll parity(ll x) {
   //1 if odd
