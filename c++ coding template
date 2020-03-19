@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
+#include <boost/multiprecision/cpp_int.hpp>
 using namespace std;
+using namespace boost::multiprecision; 
 #define bitcount(x) __builtin_popcount(x)
 #define ll long long int
 #define INF 1000000007
