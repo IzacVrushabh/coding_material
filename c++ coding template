@@ -1,23 +1,67 @@
+/*
+ ___
+/   \
+\___/
+ ___   ________   ____ __    ________
+|   | |____    | /    '  \  /  _____ |      
+|   |     /   / |   __   | |  |     \|
+|   |    /   /  |  |  |  | |  |
+|   |   /   /   |  |__|  | |  | 
+|   |_ /   /___ |         \|  |_____/| 
+|____/|________| \_____/\_/ \________|  ............
+
+
+*/
+
+//mehnat karo saalo.....
+
+// #pragma GCC optimize "trapv"
 #include <bits/stdc++.h>
-#include <boost/multiprecision/cpp_int.hpp>
+//#include <boost/multiprecision/cpp_int.hpp> 
 using namespace std;
-using namespace boost::multiprecision; 
+//using namespace boost::multiprecision; 
 #define bitcount(x) __builtin_popcount(x)
 #define ll long long int
-#define INF 1000000007
+#define INF 1000000000
+#define mod 1000000007
 #define PI 3.1415926535897932384626
 #define endl "\n"
+#define pb push_back
+#define em emplace_back
+#define mpr make_pair //or simply use { a , b }
+#define mk make_tuple // acc. to que...
+#define all(v) v.begin(),v.end()
+#define sortall(v) sort(all(v))   //increasing order sorting
+#define all_rev(v)  v.begin(),v.end(), greater<ll>() 
+#define sortallrev(v) sort(all_rev(v)) // reverse order sorting
+#define mems(x, y) memset(x, y, sizeof(x)) // clear a list..
+#define ff first
+#define ss second
+#define mxe(v) *max_element(v.begin(),v.end())
+#define mne(v) *min_element(v.begin(),v.end())
+#define bs binary_search
+#define lb lower_bound
+#define ub upper_bound
+#define mpll map<ll,ll>
+#define umpll unordered_map<ll,ll> 
+#define Rev(i,n) for(int i=n-1;i>=0;i--)
+#define Rep0(i,a,n) for(int i=a; i<n; ++i)
+#define Rep1(i,a,n) for(int i=a; i<=n; ++i)
+#define bts bitset<64>  //bitwise operator...
+#define index_of at     //index of any element..
+#define deb(x) cout<< #x << "=" << x <<"\n"
+#define deb2(x,y) cout<< #x << "=" << x << "," << #y << "=" << y <<"\n"
+
+const int mxN=5e4;
 
 typedef pair<int, int>  pii;
-typedef pair<ll, ll>    pl;
+typedef pair<ll, ll>    pll;
 typedef vector<int>	    vi;
 typedef vector<ll>      vl;
 typedef vector<pii>		vpii;
-typedef vector<pl>		vpl;
+typedef vector<pll>		vpll;
 typedef vector<vi>		vvi;
 typedef vector<vl>		vvl;
-
-const int MOD = 1e9 + 7
 
 ll parity(ll x) {
   //1 if odd
@@ -113,10 +157,11 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
     cout.tie(0);
-	ll t;
-	cin>>t;
+	ll t; 
+	t=1;
+	cin>> t;
 	while(t--){
-	
+	    
 	    
 	}
 	
