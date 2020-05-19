@@ -21,6 +21,7 @@
 using namespace std;
 //using namespace boost::multiprecision; 
 #define bitcount(x) __builtin_popcount(x)
+#define bits_to_int to_ullong() // or ulong()
 #define ll long long int
 #define INF 1000000000
 #define mod 1000000007
