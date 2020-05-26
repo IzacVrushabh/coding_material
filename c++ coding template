@@ -20,22 +20,31 @@
 //#include <boost/multiprecision/cpp_int.hpp> 
 using namespace std;
 //using namespace boost::multiprecision; 
+
 #define bitcount(x) __builtin_popcount(x)
+#define setbits(x) __builtin_popcountll(x)
+#define parity(x) __builtin_pairityll(x) 	  //true if odd
+#define leadzeros(x)  __builtin_clzll(x)	  //count leading zeros
+#define trailzeros(x)   __builtin_ctzll(x)    //count trailing zeros
 #define bits_to_int to_ullong() // or ulong()
+
 #define ll long long int
 #define INF 1000000000
 #define mod 1000000007
 #define PI 3.1415926535897932384626
 #define endl "\n"
+
 #define pb push_back
 #define em emplace_back
 #define mpr make_pair //or simply use { a , b }
 #define mk make_tuple // acc. to que...
+
 #define all(v) v.begin(),v.end()
 #define sortall(v) sort(all(v))   //increasing order sorting
 #define all_rev(v)  v.begin(),v.end(), greater<ll>() 
 #define sortallrev(v) sort(all_rev(v)) // reverse order sorting
 #define mems(x, y) memset(x, y, sizeof(x)) // clear a list..
+
 #define ff first
 #define ss second
 #define mxe(v) *max_element(v.begin(),v.end())
@@ -45,13 +54,18 @@ using namespace std;
 #define ub upper_bound
 #define mpll map<ll,ll>
 #define umpll unordered_map<ll,ll> 
+
 #define Rev(i,n) for(int i=n-1;i>=0;i--)
 #define Rep0(i,a,n) for(int i=a; i<n; ++i)
 #define Rep1(i,a,n) for(int i=a; i<=n; ++i)
+
 #define bts bitset<64>  //bitwise operator...
 #define index_of at     //index of any element..
 #define deb(x) cout<< #x << "=" << x <<"\n"
 #define deb2(x,y) cout<< #x << "=" << x << "," << #y << "=" << y <<"\n"
+//member functions :
+//1. order_of_key(k) : number of elements strictly lesser than k
+//2. find_by_order(k) : k-th element in the set
 
 const int mxN=5e4;
 
