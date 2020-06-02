@@ -202,6 +202,22 @@ void dfs(int u,int pr){ // call dfs( 0 , -1) //root node = 0 and its parent as -
 
 }
 
+/*
+void dfs(int node,int pr){
+	if(pr<0) 
+	dp[node]=0;
+	else 
+	dp[node] = dp[pr] + 1;
+	par[node] = pr;
+	for(auto child: adj[node]){
+		if(child!=pr)
+		dfs(child,node);
+	}
+
+}
+
+*/
+
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
