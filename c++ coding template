@@ -187,6 +187,21 @@ ll nCr(ll n,ll r)
 	return nCr(n-1,r) + nCr(n-1,r-1);
 }
 
+//const int mx=2e5+1; // as per requirement... 
+//int par[mx],dp[mx]
+
+void dfs(int u,int pr){ // call dfs( 0 , -1) //root node = 0 and its parent as -1...
+	//  calc. depth from root node nd stores parent node..
+	if(pr<0) dp[u]=0;
+	else dp[u]=1+dp[pr];
+	par[u]=pr;
+	for(auto v:adj[u]){
+		if(v==pr) continue;
+		dfs(v,u);
+	}
+
+}
+
 int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(0);
