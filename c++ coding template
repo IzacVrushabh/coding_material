@@ -191,7 +191,7 @@ ll nCr(ll n,ll r)
 //int par[mx],dp[mx]
 
 void dfs(int u,int pr){ // call dfs( 0 , -1) //root node = 0 and its parent as -1...
-	//  calc. depth from root node nd stores parent node..
+	//  depth and parent node..
 	if(pr<0) dp[u]=0;
 	else dp[u]=1+dp[pr];
 	par[u]=pr;
